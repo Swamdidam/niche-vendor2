@@ -80,7 +80,7 @@ app.get('/get', function(req, res){
             res.render('secret')
         })
 
-    app.post('/createAds',  upload.array('file', 4), (req, res)=>{
+    app.post('/createAds',  upload.array('file', 6), (req, res)=>{
     return Ads.create(req.body)
         .then(doc =>{
             return res.status(200).json(doc)
